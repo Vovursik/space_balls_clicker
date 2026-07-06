@@ -1,5 +1,6 @@
 # Space Balls: Clicker
 
+![Version](https://img.shields.io/badge/version-1.0.0--final-green?style=flat-square)
 ![Platform](https://img.shields.io/badge/Web-0078d4?style=flat-square&logo=html5&logoColor=white)
 ![Godot](https://img.shields.io/badge/Godot-4.5-478cbf?style=flat-square&logo=godotengine&logoColor=white)
 
