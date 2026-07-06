@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpyqyvacffqh8"]
+
+[ext_resource type="Texture2D" uid="uid://b63er0bqv3yc1" path="res://Textures2D/TextureAtlas/ItemsAtlas/particle.tres" id="1_y6nbl"]
+
+[sub_resource type="Curve" id="Curve_25rms"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_l3p5d"]
+offsets = PackedFloat32Array(0.486486, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="CPUParticles2D" type="CPUParticles2D"]
+emitting = false
+amount = 6
+texture = ExtResource("1_y6nbl")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 250.0
+initial_velocity_max = 500.0
+angle_max = 360.0
+scale_amount_min = 1.5
+scale_amount_max = 1.5
+scale_amount_curve = SubResource("Curve_25rms")
+color_ramp = SubResource("Gradient_l3p5d")

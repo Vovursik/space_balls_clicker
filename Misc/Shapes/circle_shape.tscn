@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://baq3t7qbkeo7g"]
+
+[ext_resource type="Script" uid="uid://gxl2f6j7hwfs" path="res://Scripts/Shapes/circle.gd" id="1_076de"]
+[ext_resource type="Texture2D" uid="uid://bmkgpwg41c7tv" path="res://Textures2D/Shapes/ring.png" id="2_0flul"]
+
+[node name="CircleShape" type="RigidBody2D"]
+gravity_scale = 0.0
+freeze = true
+freeze_mode = 1
+script = ExtResource("1_076de")
+collision_radius = 370.0
+collision_thickness = 10.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_0flul")
+region_rect = Rect2(0, 0, 1024, 1024)

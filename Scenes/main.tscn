@@ -1,0 +1,2247 @@
+[gd_scene load_steps=81 format=3 uid="uid://f8dl3pbuajrn"]
+
+[ext_resource type="Texture2D" uid="uid://boxxj6t5lo8t3" path="res://Textures2D/background.png" id="2_bo1nx"]
+[ext_resource type="Script" uid="uid://cd72i3g7r5wee" path="res://Scripts/shape_handler.gd" id="3_d1ilt"]
+[ext_resource type="Script" uid="uid://dhsbetc44aru3" path="res://Scripts/GUI/stats_panel.gd" id="3_fdnlq"]
+[ext_resource type="Script" uid="uid://3ey5o5eowcti" path="res://Scripts/ball_handler.gd" id="4_k12tt"]
+[ext_resource type="FontFile" uid="uid://c84mkqgg0najg" path="res://Fonts/Tektur-VariableFont_wdth,wght.ttf" id="4_kry3j"]
+[ext_resource type="Texture2D" uid="uid://blxwqimn05sec" path="res://Textures2D/TextureAtlas/PanelsAtlas/stat_panel.tres" id="5_hptm8"]
+[ext_resource type="PackedScene" uid="uid://dtc26ip5sqoy5" path="res://Misc/Balls/blast_ball.tscn" id="6_gt3je"]
+[ext_resource type="Texture2D" uid="uid://yulklcrdeycg" path="res://Textures2D/TextureAtlas/ItemsAtlas/gem.tres" id="6_jkdf5"]
+[ext_resource type="PackedScene" uid="uid://crp1allcuxrks" path="res://Misc/Balls/bonus_ball.tscn" id="7_3pmx8"]
+[ext_resource type="PackedScene" uid="uid://brw8oxvabm7eb" path="res://Misc/Balls/green_ball.tscn" id="7_jkdf5"]
+[ext_resource type="AudioStream" uid="uid://d3aqlnst3mxfn" path="res://Audio/music.mp3" id="8_nwwfm"]
+[ext_resource type="PackedScene" uid="uid://f5a3udxdjyie" path="res://Misc/Balls/speed_ball.tscn" id="8_u50mg"]
+[ext_resource type="Texture2D" uid="uid://h4s22t68heg2" path="res://Textures2D/TextureAtlas/ItemsAtlas/balls.tres" id="8_wsu2k"]
+[ext_resource type="Texture2D" uid="uid://06dt4t2a62r8" path="res://Textures2D/TextureAtlas/PanelsAtlas/shape_panel.tres" id="9_d1ilt"]
+[ext_resource type="Texture2D" uid="uid://bcd81dbaycixu" path="res://Textures2D/TextureAtlas/PanelsAtlas/shape_progress.tres" id="10_6iyac"]
+[ext_resource type="Texture2D" uid="uid://bei76hopgkav7" path="res://Textures2D/TextureAtlas/ButtonsAtlas/sound_on.tres" id="12_wsu2k"]
+[ext_resource type="Texture2D" uid="uid://cl1fxiu7h6s60" path="res://Textures2D/TextureAtlas/ButtonsAtlas/sound_on_pressed.tres" id="13_k12tt"]
+[ext_resource type="Texture2D" uid="uid://c1376x3sspnwu" path="res://Textures2D/TextureAtlas/ButtonsAtlas/shop.tres" id="14_h1bgf"]
+[ext_resource type="Texture2D" uid="uid://pe6flpyewm15" path="res://Textures2D/TextureAtlas/ButtonsAtlas/shop_pressed.tres" id="15_b3802"]
+[ext_resource type="Script" uid="uid://65njcjxu73v2" path="res://Scripts/GUI/save_data_loader.gd" id="17_fevyy"]
+[ext_resource type="Script" uid="uid://dn7dnt4wx6tgf" path="res://Scripts/GUI/sound_button.gd" id="17_gt3je"]
+[ext_resource type="Texture2D" uid="uid://ddsqwhrrgllia" path="res://Textures2D/TextureAtlas/ButtonsAtlas/load_circle.tres" id="17_h1bgf"]
+[ext_resource type="FontFile" uid="uid://crs4tmnhx747" path="res://Fonts/GoogleSans_17pt-Medium.ttf" id="18_b3802"]
+[ext_resource type="Script" uid="uid://bgqglerkcylxx" path="res://addons/SmoothScroll/smooth_scroll_container.gd" id="20_1w6v2"]
+[ext_resource type="Texture2D" uid="uid://d2kibp3nt60aa" path="res://Textures2D/TextureAtlas/ButtonsAtlas/ad_bar.tres" id="20_hibaj"]
+[ext_resource type="Script" uid="uid://dvvc75dvopgcg" path="res://addons/SmoothScroll/scroll_damper/linear_scroll_damper.gd" id="21_536cc"]
+[ext_resource type="Texture2D" uid="uid://cdk4dimyl8hu8" path="res://Textures2D/TextureAtlas/ButtonsAtlas/card.tres" id="22_6vcvc"]
+[ext_resource type="Script" uid="uid://dxjrjxkhr5wkp" path="res://Scripts/ad.gd" id="23_3pmx8"]
+[ext_resource type="Texture2D" uid="uid://bttwnq5tmhhri" path="res://Textures2D/TextureAtlas/ItemsAtlas/plus.tres" id="23_7k868"]
+[ext_resource type="Texture2D" uid="uid://cs062225a8lc1" path="res://Textures2D/TextureAtlas/ButtonsAtlas/card_button.tres" id="24_hpc6h"]
+[ext_resource type="Texture2D" uid="uid://bvybm40evs5fx" path="res://Textures2D/TextureAtlas/ButtonsAtlas/card_button_pressed.tres" id="25_kltya"]
+[ext_resource type="Script" uid="uid://daovy4bsxvtjh" path="res://Scripts/card.gd" id="27_kltya"]
+[ext_resource type="AudioStream" uid="uid://cjlsyboweycun" path="res://Audio/click.mp3" id="28_e08e2"]
+[ext_resource type="AudioStream" uid="uid://cghq27maqhc2o" path="res://Audio/buy.mp3" id="29_aqgau"]
+[ext_resource type="Texture2D" uid="uid://cr88xsygxck72" path="res://Textures2D/TextureAtlas/ItemsAtlas/pow.tres" id="29_neg2b"]
+[ext_resource type="Texture2D" uid="uid://bfcgt20n4ebal" path="res://Textures2D/TextureAtlas/ItemsAtlas/bomb.tres" id="30_r33sp"]
+[ext_resource type="Script" uid="uid://47mrg72mg1wk" path="res://Scripts/tutor.gd" id="31_aa8k8"]
+[ext_resource type="Texture2D" uid="uid://b7t1v7nl7iol1" path="res://Textures2D/TextureAtlas/ItemsAtlas/bonus.tres" id="31_hdf80"]
+[ext_resource type="Texture2D" uid="uid://c8ko43tnjpfgl" path="res://Textures2D/TextureAtlas/TutorAtlas/hand_1.tres" id="31_o1aky"]
+[ext_resource type="Texture2D" uid="uid://b6grl28yhbdpd" path="res://Textures2D/TextureAtlas/ItemsAtlas/speed.tres" id="32_jwpg7"]
+[ext_resource type="Texture2D" uid="uid://cd3rhbplk8wo3" path="res://Textures2D/TextureAtlas/TutorAtlas/hit.tres" id="32_kwxat"]
+[ext_resource type="Texture2D" uid="uid://df04h7d386dly" path="res://Textures2D/TextureAtlas/ItemsAtlas/crit.tres" id="33_k2e45"]
+[ext_resource type="Texture2D" uid="uid://4e7b0burlcwn" path="res://Textures2D/TextureAtlas/ItemsAtlas/time.tres" id="34_536cc"]
+[ext_resource type="Texture2D" uid="uid://7esuqu651dhs" path="res://Textures2D/TextureAtlas/TutorAtlas/hand_0.tres" id="34_kwxat"]
+[ext_resource type="Script" uid="uid://bnkucbfi5v3pl" path="res://Scripts/shop.gd" id="41_kqrg6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1w6v2"]
+
+[sub_resource type="Resource" id="Resource_aqgau"]
+script = ExtResource("21_536cc")
+metadata/_custom_type_script = "uid://dvvc75dvopgcg"
+
+[sub_resource type="Resource" id="Resource_kqrg6"]
+script = ExtResource("21_536cc")
+metadata/_custom_type_script = "uid://dvvc75dvopgcg"
+
+[sub_resource type="Animation" id="Animation_s8vy0"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(604, -0.05, 0, 0.05, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_jut3y"]
+resource_name = "hide"
+length = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.05, 0, 0.05, 0, 450, -0.05, 0, 0.05, 0),
+"times": PackedFloat32Array(0, 0.1)
+}
+
+[sub_resource type="Animation" id="Animation_nwwfm"]
+resource_name = "show"
+length = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(450, -0.05, 0, 0.05, 0, 0, -0.05, 0, 0.05, 0),
+"times": PackedFloat32Array(0, 0.1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v2nl5"]
+_data = {
+&"RESET": SubResource("Animation_s8vy0"),
+&"hide": SubResource("Animation_jut3y"),
+&"show": SubResource("Animation_nwwfm")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dmskm"]
+animation = &"hide"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xdkp6"]
+animation = &"show"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_54nrm"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_55jeb"]
+switch_mode = 1
+advance_mode = 2
+advance_condition = &"is_showing"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gsvbx"]
+switch_mode = 1
+advance_mode = 2
+advance_condition = &"is_hiding"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_bv80c"]
+states/End/position = Vector2(590, 100)
+states/hide/node = SubResource("AnimationNodeAnimation_dmskm")
+states/hide/position = Vector2(318, 100)
+states/show/node = SubResource("AnimationNodeAnimation_xdkp6")
+states/show/position = Vector2(460, 100)
+transitions = ["Start", "hide", SubResource("AnimationNodeStateMachineTransition_54nrm"), "hide", "show", SubResource("AnimationNodeStateMachineTransition_55jeb"), "show", "hide", SubResource("AnimationNodeStateMachineTransition_gsvbx")]
+
+[sub_resource type="Animation" id="Animation_kwxat"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.08726646, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TextureRect2:scale:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TextureRect2:scale:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_o1aky"]
+resource_name = "click"
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(-20, 0, 0, 0.16944444, 0, 32, -0.15682241, 2.65814, 0.4, -6.78, -20, -0.30833334, 3, 0, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(-20, 0, 0, 0.16944444, 0, -10, -0.054230016, -0.43455717, 0.24958748, 2, -20, -0.2, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2, 0),
+"points": PackedFloat32Array(-0.08726646, 0, 0, 0.25, 0, 0.17453292, -0.25, 0, 0.25, 0, -0.08726646, -0.25, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TextureRect2:scale:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0.6, -0.25, 0, 0.5, 0, 1, -0.16666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TextureRect2:scale:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0.6, -0.25, 0, 0.5, 0, 1, -0.16666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kwxat"]
+_data = {
+&"RESET": SubResource("Animation_kwxat"),
+&"click": SubResource("Animation_o1aky")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_o1aky"]
+animation = &"click"
+
+[sub_resource type="Animation" id="Animation_kqrg6"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.17453292, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_aa8k8"]
+resource_name = "click"
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2, 0),
+"points": PackedFloat32Array(-30, -0.25, 0, 0.25, 0, 20, -0.083333336, 0, 0.083333336, 0, -30, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(-10, -0.25, 0, 0.25, 0, 0, -0.08204494, 0.5627784, 0.23333335, -1.6005249, -10, -0.16666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(-0.17453292, -0.25, 0, 0.25, 0, 0, -0.08367669, 0.0029156546, 0.27241987, -0.009492277, -0.17453292, -0.16666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nwwfm"]
+_data = {
+&"RESET": SubResource("Animation_kqrg6"),
+&"click": SubResource("Animation_aa8k8")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kwxat"]
+animation = &"click"
+
+[sub_resource type="Animation" id="Animation_b3802"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:pivot_offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(100, 100)]
+}
+
+[sub_resource type="Animation" id="Animation_h1bgf"]
+resource_name = "rotate"
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.6, 1.7599994, 6.2831855, -0.7, -1.2965198, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:pivot_offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(100, 100)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fevyy"]
+_data = {
+&"RESET": SubResource("Animation_b3802"),
+&"rotate": SubResource("Animation_h1bgf")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_h1bgf"]
+animation = &"rotate"
+
+[sub_resource type="Animation" id="Animation_3pmx8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CenterContainer/Control:theme_override_constants/separation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(40, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CenterContainer/Control:modulate:r")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.0005, 0, 0.0005, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CenterContainer/Control:modulate:g")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.0005, 0, 0.0005, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CenterContainer/Control:modulate:b")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.0005, 0, 0.0005, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CenterContainer/Control:modulate:a")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.0005, 0, 0.0005, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_r33sp"]
+resource_name = "hide"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CenterContainer/Control:theme_override_constants/separation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(80, -0.15, 0, 0.2, 55.5),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CenterContainer/Control:modulate:r")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CenterContainer/Control:modulate:g")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CenterContainer/Control:modulate:b")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CenterContainer/Control:modulate:a")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_gt3je"]
+resource_name = "show"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CenterContainer/Control:theme_override_constants/separation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 1),
+"points": PackedFloat32Array(80, -0.15, 0, 0.2, 55.5, 40, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CenterContainer/Control:modulate:r")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.15, 0, 0.15, 0, 1, -0.050000004, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CenterContainer/Control:modulate:g")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.15, 0, 0.15, 0, 1, -0.050000004, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CenterContainer/Control:modulate:b")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.15, 0, 0.15, 0, 1, -0.050000004, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CenterContainer/Control:modulate:a")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.15, 0, 0.15, 0, 1, -0.050000004, -0.16666667, 0, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u50mg"]
+_data = {
+&"RESET": SubResource("Animation_3pmx8"),
+&"hide": SubResource("Animation_r33sp"),
+&"show": SubResource("Animation_gt3je")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hdf80"]
+animation = &"hide"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jwpg7"]
+animation = &"show"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_k2e45"]
+advance_mode = 2
+advance_condition = &"is_hiding"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_536cc"]
+advance_mode = 2
+advance_condition = &"is_showing"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_r33sp"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_8cuat"]
+states/End/position = Vector2(629, 109)
+states/Start/position = Vector2(204, 109)
+states/hide/node = SubResource("AnimationNodeAnimation_hdf80")
+states/hide/position = Vector2(310, 109)
+states/show/node = SubResource("AnimationNodeAnimation_jwpg7")
+states/show/position = Vector2(460, 109)
+transitions = ["show", "hide", SubResource("AnimationNodeStateMachineTransition_k2e45"), "hide", "show", SubResource("AnimationNodeStateMachineTransition_536cc"), "Start", "hide", SubResource("AnimationNodeStateMachineTransition_r33sp")]
+graph_offset = Vector2(-62, 3)
+
+[node name="Main" type="Node"]
+
+[node name="Background" type="Control" parent="."]
+custom_minimum_size = Vector2(1024, 1024)
+layout_mode = 3
+anchor_left = -0.5
+anchor_top = -0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bo1nx")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Scene" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="Scene"]
+limit_enabled = false
+limit_left = -10000
+limit_top = -10000
+limit_right = 10000
+limit_bottom = 10000
+
+[node name="ShapeHandler" type="Node2D" parent="Scene"]
+script = ExtResource("3_d1ilt")
+scene_paths = Array[String](["res://Misc/Shapes/square_shape.tscn", "res://Misc/Shapes/circle_shape.tscn", "res://Misc/Shapes/pentagon_shape.tscn", "res://Misc/Shapes/triangle_shape.tscn", "res://Misc/Shapes/cross_shape.tscn", "res://Misc/Shapes/time_shape.tscn", "res://Misc/Shapes/star_shape.tscn", "res://Misc/Shapes/gear_shape.tscn", "res://Misc/Shapes/crystal_shape.tscn"])
+
+[node name="BallHandler" type="Node2D" parent="Scene"]
+script = ExtResource("4_k12tt")
+ball_scenes = Array[PackedScene]([ExtResource("7_jkdf5"), ExtResource("6_gt3je"), ExtResource("7_3pmx8"), ExtResource("8_u50mg")])
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Scene"]
+stream = ExtResource("8_nwwfm")
+volume_db = -10.0
+autoplay = true
+
+[node name="GUI" type="Control" parent="."]
+layout_mode = 3
+anchor_left = -0.5
+anchor_top = -0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="GUI"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -420.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CardsPanel" type="MarginContainer" parent="GUI/MarginContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="GUI/MarginContainer/CardsPanel"]
+layout_mode = 2
+color = Color(0, 0, 0, 0.627451)
+
+[node name="SmoothScrollContainer" type="ScrollContainer" parent="GUI/MarginContainer/CardsPanel"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1w6v2")
+script = ExtResource("20_1w6v2")
+speed = 800.0
+wheel_scroll_damper = SubResource("Resource_aqgau")
+dragging_scroll_damper = SubResource("Resource_kqrg6")
+allow_vertical_scroll = false
+disable_scrollbar = true
+metadata/_custom_type_script = "uid://bgqglerkcylxx"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer"]
+layout_mode = 2
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Card0" type="TextureRect" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer"]
+self_modulate = Color(0.10499998, 0.7, 0.1942499, 1)
+custom_minimum_size = Vector2(322, 420)
+layout_mode = 2
+texture = ExtResource("22_6vcvc")
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card0"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_right = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card0/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="TextureRect" type="TextureRect" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card0/VBoxContainer/HBoxContainer"]
+self_modulate = Color(0.105882354, 0.7019608, 0.19607843, 1)
+layout_mode = 2
+texture = ExtResource("23_7k868")
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card0/VBoxContainer/HBoxContainer"]
+self_modulate = Color(0.54901963, 0.8901961, 0.16078432, 1)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "KEY_CARDNAME_1"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="MarginContainer" type="MarginContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card0/VBoxContainer"]
+layout_mode = 2
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card0/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(260, 80)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "None "
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card0/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="TextureRect" type="TextureRect" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card0/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("6_jkdf5")
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card0/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "0"
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="TextureButton" type="TextureButton" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card0/VBoxContainer"]
+self_modulate = Color(0.105882354, 0.7019608, 0.19607843, 1)
+custom_minimum_size = Vector2(0, 114)
+layout_mode = 2
+mouse_filter = 1
+action_mode = 0
+texture_normal = ExtResource("24_hpc6h")
+texture_pressed = ExtResource("25_kltya")
+stretch_mode = 0
+script = ExtResource("27_kltya")
+err_sound = ExtResource("28_e08e2")
+buy_sound = ExtResource("29_aqgau")
+price_scale = 3.8
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="CenterContainer" type="CenterContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card0/VBoxContainer/TextureButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card0/VBoxContainer/TextureButton/CenterContainer"]
+self_modulate = Color(0.54901963, 0.8901961, 0.16078432, 1)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 28
+text = "KEY_BUY"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card0/VBoxContainer/TextureButton"]
+stream = ExtResource("28_e08e2")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card0/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card0/VBoxContainer/HBoxContainer3"]
+self_modulate = Color(0.54901963, 0.8901961, 0.16078432, 1)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "KEY_LEVEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label2" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card0/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "None"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Card1" type="TextureRect" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer"]
+self_modulate = Color(0.90588236, 0.11372549, 0.11372549, 1)
+custom_minimum_size = Vector2(322, 420)
+layout_mode = 2
+texture = ExtResource("22_6vcvc")
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_right = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card1/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="TextureRect" type="TextureRect" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card1/VBoxContainer/HBoxContainer"]
+self_modulate = Color(0.90588236, 0.11372549, 0.11372549, 1)
+layout_mode = 2
+texture = ExtResource("29_neg2b")
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card1/VBoxContainer/HBoxContainer"]
+self_modulate = Color(0.90588236, 0.46666667, 0.11372549, 1)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "KEY_CARDNAME_2"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="MarginContainer" type="MarginContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card1/VBoxContainer"]
+layout_mode = 2
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card1/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(260, 80)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "None "
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card1/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="TextureRect" type="TextureRect" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card1/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("6_jkdf5")
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card1/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "0"
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="TextureButton" type="TextureButton" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card1/VBoxContainer"]
+self_modulate = Color(0.90588236, 0.11372549, 0.11372549, 1)
+custom_minimum_size = Vector2(0, 114)
+layout_mode = 2
+mouse_filter = 1
+action_mode = 0
+texture_normal = ExtResource("24_hpc6h")
+texture_pressed = ExtResource("25_kltya")
+stretch_mode = 0
+script = ExtResource("27_kltya")
+err_sound = ExtResource("28_e08e2")
+buy_sound = ExtResource("29_aqgau")
+card_upgrade = "up_score_level"
+card_key_desc = "KEY_CARDDESC_2"
+purchase_count = 3
+price_scale = 1.7
+max_level = 0
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="CenterContainer" type="CenterContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card1/VBoxContainer/TextureButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card1/VBoxContainer/TextureButton/CenterContainer"]
+self_modulate = Color(0.90588236, 0.46666667, 0.11372549, 1)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 28
+text = "KEY_BUY"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card1/VBoxContainer/TextureButton"]
+stream = ExtResource("28_e08e2")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card1/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card1/VBoxContainer/HBoxContainer3"]
+self_modulate = Color(0.90588236, 0.46666667, 0.11372549, 1)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "KEY_LEVEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label2" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card1/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "None"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Card2" type="TextureRect" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer"]
+self_modulate = Color(0.9254902, 0.6313726, 0.07450981, 1)
+custom_minimum_size = Vector2(322, 420)
+layout_mode = 2
+texture = ExtResource("22_6vcvc")
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_right = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card2/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="TextureRect" type="TextureRect" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card2/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(54, 64)
+layout_mode = 2
+texture = ExtResource("30_r33sp")
+expand_mode = 5
+stretch_mode = 5
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card2/VBoxContainer/HBoxContainer"]
+self_modulate = Color(0.8862745, 0.8901961, 0.16078432, 1)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "KEY_CARDNAME_3"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="MarginContainer" type="MarginContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card2/VBoxContainer"]
+layout_mode = 2
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card2/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(260, 80)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "None "
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card2/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="TextureRect" type="TextureRect" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("6_jkdf5")
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "0"
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="TextureButton" type="TextureButton" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card2/VBoxContainer"]
+self_modulate = Color(0.9254902, 0.6313726, 0.07450981, 1)
+custom_minimum_size = Vector2(0, 114)
+layout_mode = 2
+mouse_filter = 1
+action_mode = 0
+texture_normal = ExtResource("24_hpc6h")
+texture_pressed = ExtResource("25_kltya")
+stretch_mode = 0
+script = ExtResource("27_kltya")
+err_sound = ExtResource("28_e08e2")
+buy_sound = ExtResource("29_aqgau")
+card_upgrade = "up_ball_1_level"
+card_key_desc = "KEY_CARDDESC_3"
+purchase_count = 50
+price_scale = 3.4
+max_level = 25
+is_percent = true
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="CenterContainer" type="CenterContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card2/VBoxContainer/TextureButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card2/VBoxContainer/TextureButton/CenterContainer"]
+self_modulate = Color(0.8862745, 0.8901961, 0.16078432, 1)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 28
+text = "KEY_BUY"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label2" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card2/VBoxContainer/TextureButton/CenterContainer"]
+self_modulate = Color(0.8862745, 0.8901961, 0.16078432, 1)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 28
+text = "KEY_BUY"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card2/VBoxContainer/TextureButton"]
+stream = ExtResource("28_e08e2")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card2/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card2/VBoxContainer/HBoxContainer3"]
+self_modulate = Color(0.8862745, 0.8901961, 0.16078432, 1)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "KEY_LEVEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label2" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card2/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "None"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Card3" type="TextureRect" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer"]
+self_modulate = Color(0.07450981, 0.5058824, 0.9254902, 1)
+custom_minimum_size = Vector2(322, 420)
+layout_mode = 2
+texture = ExtResource("22_6vcvc")
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_right = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card3/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="TextureRect" type="TextureRect" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card3/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(54, 64)
+layout_mode = 2
+texture = ExtResource("31_hdf80")
+expand_mode = 1
+stretch_mode = 5
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card3/VBoxContainer/HBoxContainer"]
+self_modulate = Color(0.16078432, 0.8745098, 0.8901961, 1)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "KEY_CARDNAME_4"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="MarginContainer" type="MarginContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card3/VBoxContainer"]
+layout_mode = 2
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card3/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(260, 80)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "None "
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card3/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="TextureRect" type="TextureRect" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card3/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("6_jkdf5")
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card3/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "0"
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="TextureButton" type="TextureButton" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card3/VBoxContainer"]
+self_modulate = Color(0.07450981, 0.5058824, 0.9254902, 1)
+custom_minimum_size = Vector2(0, 114)
+layout_mode = 2
+mouse_filter = 1
+action_mode = 0
+texture_normal = ExtResource("24_hpc6h")
+texture_pressed = ExtResource("25_kltya")
+stretch_mode = 0
+script = ExtResource("27_kltya")
+err_sound = ExtResource("28_e08e2")
+buy_sound = ExtResource("29_aqgau")
+card_upgrade = "up_ball_2_level"
+card_key_desc = "KEY_CARDDESC_4"
+purchase_count = 40
+price_scale = 3.4
+max_level = 25
+is_percent = true
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="CenterContainer" type="CenterContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card3/VBoxContainer/TextureButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card3/VBoxContainer/TextureButton/CenterContainer"]
+self_modulate = Color(0.16078432, 0.8745098, 0.8901961, 1)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 28
+text = "KEY_BUY"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card3/VBoxContainer/TextureButton"]
+stream = ExtResource("28_e08e2")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card3/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card3/VBoxContainer/HBoxContainer3"]
+self_modulate = Color(0.16078432, 0.8745098, 0.8901961, 1)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "KEY_LEVEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label2" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card3/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "None"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Card4" type="TextureRect" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer"]
+self_modulate = Color(0.4, 0.07450981, 0.9254902, 1)
+custom_minimum_size = Vector2(322, 420)
+layout_mode = 2
+texture = ExtResource("22_6vcvc")
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_right = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card4/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="TextureRect" type="TextureRect" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card4/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(54, 64)
+layout_mode = 2
+texture = ExtResource("32_jwpg7")
+expand_mode = 1
+stretch_mode = 5
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card4/VBoxContainer/HBoxContainer"]
+self_modulate = Color(0.7764706, 0.16078432, 0.8901961, 1)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "KEY_CARDNAME_5"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="MarginContainer" type="MarginContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card4/VBoxContainer"]
+layout_mode = 2
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card4/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(260, 80)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "None "
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card4/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="TextureRect" type="TextureRect" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card4/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("6_jkdf5")
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card4/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "0"
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="TextureButton" type="TextureButton" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card4/VBoxContainer"]
+self_modulate = Color(0.4, 0.07450981, 0.9254902, 1)
+custom_minimum_size = Vector2(0, 114)
+layout_mode = 2
+mouse_filter = 1
+action_mode = 0
+texture_normal = ExtResource("24_hpc6h")
+texture_pressed = ExtResource("25_kltya")
+stretch_mode = 0
+script = ExtResource("27_kltya")
+err_sound = ExtResource("28_e08e2")
+buy_sound = ExtResource("29_aqgau")
+card_upgrade = "up_ball_3_level"
+card_key_desc = "KEY_CARDDESC_5"
+purchase_count = 25
+price_scale = 3.6
+max_level = 25
+is_percent = true
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="CenterContainer" type="CenterContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card4/VBoxContainer/TextureButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card4/VBoxContainer/TextureButton/CenterContainer"]
+self_modulate = Color(0.7764706, 0.16078432, 0.8901961, 1)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 28
+text = "KEY_BUY"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card4/VBoxContainer/TextureButton"]
+stream = ExtResource("28_e08e2")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card4/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card4/VBoxContainer/HBoxContainer3"]
+self_modulate = Color(0.7764706, 0.16078432, 0.8901961, 1)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "KEY_LEVEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label2" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card4/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "None"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Card5" type="TextureRect" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer"]
+self_modulate = Color(0.9254902, 0.07450981, 0.87058824, 1)
+custom_minimum_size = Vector2(322, 420)
+layout_mode = 2
+texture = ExtResource("22_6vcvc")
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card5"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_right = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card5/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="TextureRect" type="TextureRect" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card5/VBoxContainer/HBoxContainer"]
+self_modulate = Color(0.9254902, 0.07450981, 0.87058824, 1)
+layout_mode = 2
+texture = ExtResource("33_k2e45")
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card5/VBoxContainer/HBoxContainer"]
+self_modulate = Color(0.16078432, 0.44705883, 0.8901961, 1)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "KEY_CARDNAME_6"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="MarginContainer" type="MarginContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card5/VBoxContainer"]
+layout_mode = 2
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card5/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(260, 80)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "None "
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card5/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="TextureRect" type="TextureRect" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card5/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("6_jkdf5")
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card5/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "0"
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="TextureButton" type="TextureButton" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card5/VBoxContainer"]
+self_modulate = Color(0.9254902, 0.07450981, 0.87058824, 1)
+custom_minimum_size = Vector2(0, 114)
+layout_mode = 2
+mouse_filter = 1
+action_mode = 0
+texture_normal = ExtResource("24_hpc6h")
+texture_pressed = ExtResource("25_kltya")
+stretch_mode = 0
+script = ExtResource("27_kltya")
+err_sound = ExtResource("28_e08e2")
+buy_sound = ExtResource("29_aqgau")
+card_upgrade = "up_score_ring_level"
+card_key_desc = "KEY_CARDDESC_6"
+purchase_count = 15
+price_scale = 2.2
+max_level = 0
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="CenterContainer" type="CenterContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card5/VBoxContainer/TextureButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card5/VBoxContainer/TextureButton/CenterContainer"]
+self_modulate = Color(0.16078432, 0.44705883, 0.8901961, 1)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 28
+text = "KEY_BUY"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card5/VBoxContainer/TextureButton"]
+stream = ExtResource("28_e08e2")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card5/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card5/VBoxContainer/HBoxContainer3"]
+self_modulate = Color(0.16078432, 0.44705883, 0.8901961, 1)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "KEY_LEVEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label2" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card5/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "None"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Card6" type="TextureRect" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer"]
+self_modulate = Color(0.09200002, 0.92, 0.5474001, 1)
+custom_minimum_size = Vector2(322, 420)
+layout_mode = 2
+texture = ExtResource("22_6vcvc")
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card6"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_right = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card6/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="TextureRect" type="TextureRect" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card6/VBoxContainer/HBoxContainer"]
+self_modulate = Color(0.09019608, 0.92156863, 0.54901963, 1)
+layout_mode = 2
+texture = ExtResource("34_536cc")
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card6/VBoxContainer/HBoxContainer"]
+self_modulate = Color(0.09000002, 0.81900007, 0.9, 1)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "KEY_CARDNAME_7"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="MarginContainer" type="MarginContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card6/VBoxContainer"]
+layout_mode = 2
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card6/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(260, 80)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "None "
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card6/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="TextureRect" type="TextureRect" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card6/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("6_jkdf5")
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card6/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "0"
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="TextureButton" type="TextureButton" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card6/VBoxContainer"]
+self_modulate = Color(0.09019608, 0.92156863, 0.54901963, 1)
+custom_minimum_size = Vector2(0, 114)
+layout_mode = 2
+mouse_filter = 1
+action_mode = 0
+texture_normal = ExtResource("24_hpc6h")
+texture_pressed = ExtResource("25_kltya")
+stretch_mode = 0
+script = ExtResource("27_kltya")
+err_sound = ExtResource("28_e08e2")
+buy_sound = ExtResource("29_aqgau")
+card_upgrade = "up_score_spawn_time"
+card_key_desc = "KEY_CARDDESC_7"
+purchase_count = 30
+price_scale = 3.6
+max_level = 20
+is_time = true
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="CenterContainer" type="CenterContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card6/VBoxContainer/TextureButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card6/VBoxContainer/TextureButton/CenterContainer"]
+self_modulate = Color(0.09019608, 0.81960785, 0.9019608, 1)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 28
+text = "KEY_BUY"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card6/VBoxContainer/TextureButton"]
+stream = ExtResource("28_e08e2")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card6/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card6/VBoxContainer/HBoxContainer3"]
+self_modulate = Color(0.09019608, 0.81960785, 0.9019608, 1)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "KEY_LEVEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="Label2" type="Label" parent="GUI/MarginContainer/CardsPanel/SmoothScrollContainer/HBoxContainer/Card6/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 24
+text = "None"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_smooth_scroll_default_mouse_filter_set = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GUI/MarginContainer/CardsPanel"]
+libraries = {
+&"": SubResource("AnimationLibrary_v2nl5")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="GUI/MarginContainer/CardsPanel"]
+tree_root = SubResource("AnimationNodeStateMachine_bv80c")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/is_hiding = false
+parameters/conditions/is_showing = false
+
+[node name="StatsPanel" type="MarginContainer" parent="GUI"]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 400.0
+offset_bottom = 285.0
+mouse_filter = 2
+script = ExtResource("3_fdnlq")
+
+[node name="HBoxContainer" type="VBoxContainer" parent="GUI/StatsPanel"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="GUI/StatsPanel/HBoxContainer"]
+custom_minimum_size = Vector2(390, 90)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("5_hptm8")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GUI/StatsPanel/HBoxContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 10.0
+offset_right = -20.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="GUI/StatsPanel/HBoxContainer/TextureRect/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("6_jkdf5")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="GUI/StatsPanel/HBoxContainer/TextureRect/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.235294)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 44
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="GUI/StatsPanel/HBoxContainer"]
+custom_minimum_size = Vector2(390, 90)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("5_hptm8")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GUI/StatsPanel/HBoxContainer/TextureRect2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 10.0
+offset_right = -20.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="GUI/StatsPanel/HBoxContainer/TextureRect2/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("8_wsu2k")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="GUI/StatsPanel/HBoxContainer/TextureRect2/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.235294)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 44
+text = "0/0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GUI/StatsPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="GUI/StatsPanel/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+value = 50.0
+stretch_margin_left = 390
+stretch_margin_top = 50
+texture_under = ExtResource("9_d1ilt")
+texture_progress = ExtResource("10_6iyac")
+tint_progress = Color(0.14902, 0.8, 0.92549, 1)
+
+[node name="Label" type="Label" parent="GUI/StatsPanel/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.862745)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_kry3j")
+theme_override_font_sizes/font_size = 22
+text = "KEY_RINGS_COUNT"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="Tutor" type="Control" parent="GUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("31_aa8k8")
+
+[node name="ColorRect" type="ColorRect" parent="GUI/Tutor"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Stage_0" type="Control" parent="GUI/Tutor"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="GUI/Tutor/Stage_0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Hand" type="Control" parent="GUI/Tutor/Stage_0/CenterContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="GUI/Tutor/Stage_0/CenterContainer/Hand"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+rotation = -0.08726646
+pivot_offset = Vector2(130, 120)
+texture = ExtResource("31_o1aky")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="GUI/Tutor/Stage_0/CenterContainer/Hand"]
+clip_contents = true
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_left = -110.0
+offset_top = -110.0
+offset_right = 90.0
+offset_bottom = 90.0
+pivot_offset = Vector2(110, 110)
+texture = ExtResource("32_kwxat")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GUI/Tutor/Stage_0/CenterContainer/Hand"]
+libraries = {
+&"": SubResource("AnimationLibrary_kwxat")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="GUI/Tutor/Stage_0/CenterContainer/Hand"]
+tree_root = SubResource("AnimationNodeAnimation_o1aky")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="MarginContainer" type="MarginContainer" parent="GUI/Tutor/Stage_0"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -432.0
+offset_right = 300.0
+offset_bottom = -132.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="GUI/Tutor/Stage_0/MarginContainer"]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("18_b3802")
+theme_override_font_sizes/font_size = 34
+text = "KEY_TUTOR_TAP"
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 3
+
+[node name="Stage_1" type="Control" parent="GUI/Tutor"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="GUI/Tutor/Stage_1"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -374.0
+offset_top = 140.0
+offset_right = -374.0
+offset_bottom = 140.0
+grow_horizontal = 0
+
+[node name="Hand" type="Control" parent="GUI/Tutor/Stage_1/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="GUI/Tutor/Stage_1/MarginContainer/Hand"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+rotation = -0.17453292
+pivot_offset = Vector2(100, 100)
+texture = ExtResource("34_kwxat")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GUI/Tutor/Stage_1/MarginContainer/Hand"]
+libraries = {
+&"": SubResource("AnimationLibrary_nwwfm")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="GUI/Tutor/Stage_1/MarginContainer/Hand"]
+tree_root = SubResource("AnimationNodeAnimation_kwxat")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="MarginContainer2" type="MarginContainer" parent="GUI/Tutor/Stage_1"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -812.0
+offset_top = 320.0
+offset_right = -212.0
+offset_bottom = 620.0
+grow_horizontal = 0
+
+[node name="Label" type="Label" parent="GUI/Tutor/Stage_1/MarginContainer2"]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("18_b3802")
+theme_override_font_sizes/font_size = 34
+text = "KEY_TUTOR_BUY"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ButtonsPanel" type="MarginContainer" parent="GUI"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -150.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 150.0
+grow_horizontal = 0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GUI/ButtonsPanel"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 6
+
+[node name="TextureButton" type="TextureButton" parent="GUI/ButtonsPanel/VBoxContainer"]
+custom_minimum_size = Vector2(140, 140)
+layout_mode = 2
+texture_normal = ExtResource("12_wsu2k")
+texture_pressed = ExtResource("13_k12tt")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("17_gt3je")
+
+[node name="TextureButton2" type="TextureButton" parent="GUI/ButtonsPanel/VBoxContainer"]
+custom_minimum_size = Vector2(140, 140)
+layout_mode = 2
+texture_normal = ExtResource("14_h1bgf")
+texture_pressed = ExtResource("15_b3802")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("41_kqrg6")
+
+[node name="SaveDataLoader" type="Control" parent="."]
+layout_mode = 3
+anchor_left = -0.5
+anchor_top = -0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("17_fevyy")
+
+[node name="ColorRect" type="ColorRect" parent="SaveDataLoader"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SaveDataLoader"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="SaveDataLoader/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="SaveDataLoader/VBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture = ExtResource("17_h1bgf")
+stretch_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SaveDataLoader/VBoxContainer/CenterContainer/TextureRect"]
+libraries = {
+&"": SubResource("AnimationLibrary_fevyy")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="SaveDataLoader/VBoxContainer/CenterContainer/TextureRect"]
+tree_root = SubResource("AnimationNodeAnimation_h1bgf")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="AD" type="Control" parent="."]
+layout_mode = 3
+anchor_left = -0.5
+anchor_top = -0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("23_3pmx8")
+
+[node name="ColorRect" type="ColorRect" parent="AD"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.54901963)
+
+[node name="CenterContainer" type="CenterContainer" parent="AD"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Control" type="VBoxContainer" parent="AD/CenterContainer"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 40
+
+[node name="TextureRect" type="TextureRect" parent="AD/CenterContainer/Control"]
+custom_minimum_size = Vector2(128, 64)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("20_hibaj")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AD/CenterContainer/Control"]
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="AD/CenterContainer/Control/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("18_b3802")
+theme_override_font_sizes/font_size = 44
+text = "KEY_AD"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="AD/CenterContainer/Control/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("18_b3802")
+theme_override_font_sizes/font_size = 44
+text = "None"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="AD/CenterContainer/Control"]
+custom_minimum_size = Vector2(128, 64)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("20_hibaj")
+expand_mode = 1
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AD"]
+process_mode = 3
+libraries = {
+&"": SubResource("AnimationLibrary_u50mg")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="AD"]
+process_mode = 3
+tree_root = SubResource("AnimationNodeStateMachine_8cuat")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/is_hiding = false
+parameters/conditions/is_showing = false

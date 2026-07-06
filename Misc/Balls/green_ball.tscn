@@ -1,0 +1,53 @@
+[gd_scene load_steps=11 format=3 uid="uid://brw8oxvabm7eb"]
+
+[ext_resource type="Script" uid="uid://c4wkyvdryltvq" path="res://Scripts/Balls/ball.gd" id="1_nt7j6"]
+[ext_resource type="AudioStream" uid="uid://dythcqj62xqve" path="res://Audio/hit.mp3" id="2_a5ous"]
+[ext_resource type="AudioStream" uid="uid://cljmfii6x8gtm" path="res://Audio/blast.mp3" id="3_mqmx1"]
+[ext_resource type="Shader" uid="uid://bp2gtdq4esivc" path="res://Shader/ball_wave.gdshader" id="4_xcelf"]
+[ext_resource type="Texture2D" uid="uid://cpwq51w6yfm44" path="res://Textures2D/placeholder_wave.png" id="5_trmew"]
+[ext_resource type="Texture2D" uid="uid://62e33kcltrr3" path="res://Textures2D/TextureAtlas/ItemsAtlas/green.tres" id="6_rbdvh"]
+[ext_resource type="PackedScene" uid="uid://dpyqyvacffqh8" path="res://Particles/cpu_particles_2d.tscn" id="7_aqe5c"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_h1bgf"]
+bounce = 2.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wsu2k"]
+radius = 29.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hibaj"]
+shader = ExtResource("4_xcelf")
+shader_parameter/radius = 150.0
+shader_parameter/rubber_intensity = 0.2
+shader_parameter/speed = 2.0
+shader_parameter/stretch = 1.1
+shader_parameter/color = Color(1, 1, 1, 1)
+
+[node name="GreenBall" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_h1bgf")
+gravity_scale = 0.0
+sleeping = true
+lock_rotation = true
+continuous_cd = 1
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_nt7j6")
+hit_sound = ExtResource("2_a5ous")
+blast_sound = ExtResource("3_mqmx1")
+sprite2_color = Color(0.521569, 0.886275, 0.109804, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wsu2k")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_hibaj")
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("5_trmew")
+region_rect = Rect2(18.315, 0, 17.06, 16.835)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("6_rbdvh")
+
+[node name="CPUParticles2D" parent="." instance=ExtResource("7_aqe5c")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_a5ous")

@@ -1,0 +1,119 @@
+[gd_scene load_steps=11 format=3 uid="uid://gjojnbev3p2r"]
+
+[ext_resource type="Script" uid="uid://bfca0biudqfaa" path="res://Scripts/Shapes/shape.gd" id="1_brwsh"]
+[ext_resource type="Texture2D" uid="uid://darwk5fkgm4de" path="res://Textures2D/Shapes/crystal.png" id="2_brwsh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5uxnj"]
+size = Vector2(32, 97.77316)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kfrm6"]
+size = Vector2(32, 133.07013)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ybnc"]
+size = Vector2(32, 237.38434)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6af5f"]
+size = Vector2(32, 237.38434)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_do15a"]
+size = Vector2(32, 97.77316)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l0mpf"]
+size = Vector2(32, 133.07013)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xk42p"]
+size = Vector2(32, 219.94855)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wph67"]
+size = Vector2(32, 219.37755)
+
+[node name="CrystalShape" type="RigidBody2D"]
+gravity_scale = 0.0
+freeze = true
+freeze_mode = 1
+script = ExtResource("1_brwsh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_brwsh")
+region_rect = Rect2(0, 0, 1024, 1024)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(56.72921, -410.4871)
+rotation = 0.9520674
+shape = SubResource("RectangleShape2D_5uxnj")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(-42.878998, -400.90527)
+rotation = 2.1821885
+shape = SubResource("RectangleShape2D_kfrm6")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(160.00002, -318)
+rotation = 2.535493
+shape = SubResource("RectangleShape2D_8ybnc")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-161, -318)
+rotation = 3.73671
+shape = SubResource("RectangleShape2D_6af5f")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(-56.729176, 410.4871)
+rotation = -2.1895254
+shape = SubResource("RectangleShape2D_5uxnj")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2(42.879032, 400.90527)
+rotation = -0.95940423
+shape = SubResource("RectangleShape2D_kfrm6")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="."]
+position = Vector2(-159.99998, 318)
+rotation = -0.60609984
+shape = SubResource("RectangleShape2D_8ybnc")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="."]
+position = Vector2(161.00003, 318)
+rotation = 0.59511733
+shape = SubResource("RectangleShape2D_6af5f")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="."]
+position = Vector2(410.4871, 56.729156)
+rotation = 2.5228636
+shape = SubResource("RectangleShape2D_do15a")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="."]
+position = Vector2(400.90527, -42.87905)
+rotation = -2.5302007
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_l0mpf")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="."]
+position = Vector2(325.16504, 155.03368)
+rotation = -2.1768963
+shape = SubResource("RectangleShape2D_xk42p")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="."]
+position = Vector2(325.45557, -155.95268)
+rotation = -0.97567904
+shape = SubResource("RectangleShape2D_wph67")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="."]
+position = Vector2(-410.4871, -56.72917)
+rotation = -0.61872905
+shape = SubResource("RectangleShape2D_do15a")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="."]
+position = Vector2(-400.90527, 42.879036)
+rotation = 0.6113921
+shape = SubResource("RectangleShape2D_l0mpf")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="."]
+position = Vector2(-325.16504, -155.03369)
+rotation = 0.96469647
+shape = SubResource("RectangleShape2D_xk42p")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="."]
+position = Vector2(-325.45557, 155.95267)
+rotation = 2.1659136
+shape = SubResource("RectangleShape2D_wph67")

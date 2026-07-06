@@ -1,0 +1,24 @@
+keys,en,ru
+KEY_LOAD,Loading data,Загрузка данных
+KEY_AD,Ad in,Реклама через
+KEY_TIME_SEC,s,с
+KEY_NEXT_RING,Next shape: ???,Следующая фигура: ???
+KEY_RINGS_COUNT,Shapes passed:,Пройдено фигур:
+KEY_TUTOR_TAP,"Tap the screen to spawn balls","Нажимай на экран, чтобы создавать шарики"
+KEY_TUTOR_BUY,"Balls earn crystals; Spend them in the shop on upgrades","Шарики зарабатывают кристаллы; Трать их в магазине на улучшения"
+KEY_BUY,Buy,Купить
+KEY_LEVEL,"Level:",Уровень:
+KEY_CARDNAME_1,Extra ball,Доп. Шарик
+KEY_CARDDESC_1,"Extra balls count:","Доп. количество шаров:"
+KEY_CARDNAME_2,Blast points,Очки за взрыв
+KEY_CARDDESC_2,"Ball blast points:","Очков за взрыв шарика:"
+KEY_CARDNAME_3,Explosive ball,Взрывной Шарик
+KEY_CARDDESC_3,"Spawn chance:","Вероятность появления:"
+KEY_CARDNAME_4,Bonus ball,Бонусный Шарик
+KEY_CARDDESC_4,"Spawn chance:","Вероятность появления:"
+KEY_CARDNAME_5,Fast ball,Быстрый Шарик
+KEY_CARDDESC_5,"Spawn chance:","Вероятность появления:"
+KEY_CARDNAME_6,Bounce points,Очки за отскок
+KEY_CARDDESC_6,"Ball bounce points:","Очков за отскок шарика:"
+KEY_CARDNAME_7,Auto clicker,Авто нажатие
+KEY_CARDDESC_7,"Automatic click every:","Авто нажатие каждые:"
