@@ -4,6 +4,8 @@
 ![Platform](https://img.shields.io/badge/Web-0078d4?style=flat-square&logo=html5&logoColor=white)
 ![Godot](https://img.shields.io/badge/Godot-4.5-478cbf?style=flat-square&logo=godotengine&logoColor=white)
 
+<img src="./icon.png" alt="Logo" width="300">
+
 A simple clicker-style game originally built for the Yandex Games platform.
 It has since been pulled from Yandex Games and is no longer available there.
 
